@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>No loud talk, just pretty energy ✨</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:#fff;
+  text-align:center;
+}
+
+.container {
+  padding:20px;
+}
+
+img {
+  width:100%;
+  border-radius:12px;
+}
+
+h1 {
+  font-size:22px;
+  margin:15px 0;
+}
+
+.btn {
+  display:block;
+  background:#ff0033;
+  color:#fff;
+  padding:15px;
+  margin:15px auto;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  max-width:300px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<img src="https://icungsilet.github.io/ElitePlayHub.com/imgcoklat.jpg" alt="preview">
+
+<h1>Watch Full Video Before It Gets Deleted</h1>
+
+<a class="btn" href="#" id="goBtn">
+▶️ Watch Now
+</a>
+
+<p style="font-size:12px;opacity:0.6;">
+Limited access • 18+ only
+</p>
+
+</div>
+
+<script>
+document.getElementById("goBtn").addEventListener("click", function(e){
+  e.preventDefault();
+
+  const params = new URLSearchParams(window.location.search);
+  const source = params.get("source") || "direct";
+  const campaign = params.get("campaign") || "default";
+  const ad = params.get("ad") || "none";
+
+  const data = JSON.stringify({
+    source: source,
+    campaign: campaign,
+    ad: ad,
+    userAgent: navigator.userAgent,
+    time: new Date().toISOString()
+  });
+
+  const webhookURL = "https://webhook.site/02ba5f1e-4c46-4e7f-ac09-54852341f95c";
+
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(webhookURL, data);
+  } else {
+    fetch(webhookURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: data
+    }).catch(() => {});
+  }
+
+ 
+  let target = "https://www.profitablecpmratenetwork.com/uq35g9cfwq?key=4c20fb6ff053c288f368b40b73680702";
+
+  target += "&source=" + source + "&campaign=" + campaign + "&ad=" + ad;
+
+  setTimeout(() => {
+    window.location.href = target;
+  }, 800);
+});
+</script>
+
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5020319,4,9,110,60,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5020319&101" alt="" border="0"></a></noscript>
+
+</body>
+</html>
